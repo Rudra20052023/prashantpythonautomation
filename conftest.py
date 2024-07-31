@@ -11,7 +11,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 @pytest.fixture(scope="module")
 def driver():
     # Setup
-    service = ChromeService(ChromeDriverManager("126.0.6478.126").install())
+    service = ChromeService(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service)
     driver.maximize_window()  # Maximize the browser window
     #driver.implicitly_wait(10)  # Set implicit wait of 10 seconds
